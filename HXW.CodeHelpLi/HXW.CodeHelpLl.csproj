@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DC41DE0B-B75E-4657-BFC2-F376A0115D3F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HXW.CodeHelpLi</RootNamespace>
+    <AssemblyName>HXW.CodeHelpLi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helper\AssemblyLoader.cs" />
+    <Compile Include="Helper\AsyncHelper.cs" />
+    <Compile Include="Helper\CollectionBase.cs" />
+    <Compile Include="Helper\DisposableAndStartableBase.cs" />
+    <Compile Include="Helper\DisposableBase.cs" />
+    <Compile Include="Helper\Exception.cs" />
+    <Compile Include="Helper\MyConvert.cs" />
+    <Compile Include="Net\DataBlock.cs" />
+    <Compile Include="Net\HeartBeatChecker.cs" />
+    <Compile Include="Net\MessageBlock.cs" />
+    <Compile Include="Net\NetDebuger.cs" />
+    <Compile Include="Helper\PlusAttribute.cs" />
+    <Compile Include="Helper\ShortGuid.cs" />
+    <Compile Include="Helper\Singleton.cs" />
+    <Compile Include="Helper\Startable.cs" />
+    <Compile Include="Helper\StringEx.cs" />
+    <Compile Include="Helper\Task.cs" />
+    <Compile Include="Helper\TEventArgs.cs" />
+    <Compile Include="Helper\TimeCounter.cs" />
+    <Compile Include="Http\ActionMonitorAttribute.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="DB\SQL\DataBase.cs" />
+    <Compile Include="Helper\DataBasePaging.cs" />
+    <Compile Include="Helper\DataTableHelp.cs" />
+    <Compile Include="Helper\DecimalHelper.cs" />
+    <Compile Include="Helper\EncryptUtil.cs" />
+    <Compile Include="DB\SQL\SqlItem.cs" />
+    <Compile Include="DB\SQL\SqlItemComparer.cs" />
+    <Compile Include="DB\SQL\SqlServer.cs" />
+    <Compile Include="Helper\GeneraSqlHelper.cs" />
+    <Compile Include="Helper\Log4netHelper.cs" />
+    <Compile Include="Helper\MailHelper.cs" />
+    <Compile Include="Helper\MemoryCache.cs" />
+    <Compile Include="Helper\ModelHelper.cs" />
+    <Compile Include="Helper\RegExp.cs" />
+    <Compile Include="Helper\SerializeHelper.cs" />
+    <Compile Include="Helper\StringHelp.cs" />
+    <Compile Include="Helper\ValidCodeHelper.cs" />
+    <Compile Include="Helper\WelinkHelper.cs" />
+    <Compile Include="Helper\XmlUtility.cs" />
+    <Compile Include="Helper\CWorker.cs" />
+    <Compile Include="Net\NetException.cs" />
+    <Compile Include="Net\TcpClientBase.cs" />
+    <Compile Include="Net\TcpEventArgs.cs" />
+    <Compile Include="Net\TcpException.cs" />
+    <Compile Include="Net\TcpServerBase.cs" />
+    <Compile Include="Net\TcpSession.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Helper\Log4Net.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
